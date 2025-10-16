@@ -1,0 +1,296 @@
+.register-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #2c5aa0, #4285f4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.register-wrapper {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  max-width: 900px;
+  width: 100%;
+  min-height: 600px;
+}
+
+.register-image {
+  background: linear-gradient(135deg, #2874f0, #1e4f8c);
+  color: white;
+  padding: 40px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.register-image img {
+  width: 200px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.register-image h2 {
+  font-size: 28px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.register-image p {
+  font-size: 18px;
+  opacity: 0.9;
+  line-height: 1.5;
+}
+
+.register-form-section {
+  flex: 1.5;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow-y: auto;
+}
+
+.register-form {
+  width: 100%;
+  max-width: 500px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.form-group.half {
+  flex: 1;
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+  box-sizing: border-box;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #2874f0;
+  box-shadow: 0 0 0 2px rgba(40, 116, 240, 0.1);
+}
+
+.password-input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 15px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #666;
+}
+
+.password-toggle:hover {
+  color: #2874f0;
+}
+
+.address-section {
+  margin: 30px 0;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+}
+
+.address-section h4 {
+  margin-bottom: 20px;
+  color: #333;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.error-message {
+  color: #ff6161;
+  background: #ffe6e6;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  text-align: center;
+  border: 1px solid #ffcccc;
+}
+
+.register-btn {
+  width: 100%;
+  background: #fb641b;
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-bottom: 20px;
+}
+
+.register-btn:hover:not(:disabled) {
+  background: #e8520d;
+}
+
+.register-btn:disabled {
+  background: #cccccc;
+  cursor: not-allowed;
+}
+
+.register-terms {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.register-terms p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.4;
+}
+
+.register-terms a {
+  color: #2874f0;
+  text-decoration: none;
+}
+
+.register-terms a:hover {
+  text-decoration: underline;
+}
+
+.login-link {
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #e0e0e0;
+  color: #666;
+}
+
+.login-link a {
+  color: #2874f0;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 968px) {
+  .register-container {
+    padding: 10px;
+  }
+
+  .register-wrapper {
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 768px) {
+  .register-wrapper {
+    flex-direction: column;
+    max-width: 500px;
+  }
+
+  .register-image {
+    padding: 30px 20px;
+  }
+
+  .register-image img {
+    width: 150px;
+  }
+
+  .register-image h2 {
+    font-size: 24px;
+  }
+
+  .register-image p {
+    font-size: 16px;
+  }
+
+  .register-form-section {
+    padding: 30px 20px;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .form-group.half {
+    margin-bottom: 20px;
+  }
+
+  .address-section {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .register-image {
+    padding: 20px 15px;
+  }
+
+  .register-form-section {
+    padding: 20px 15px;
+  }
+
+  .form-input,
+  .register-btn {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .address-section {
+    margin: 20px 0;
+    padding: 15px;
+  }
+
+  .address-section h4 {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+}
+
+/* Scrollbar styling for form section */
+.register-form-section::-webkit-scrollbar {
+  width: 6px;
+}
+
+.register-form-section::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.register-form-section::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+.register-form-section::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
